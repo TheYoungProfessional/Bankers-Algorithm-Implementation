@@ -1,0 +1,24 @@
+# Banker's Algorithm Input File
+# Lines starting with # are comments, algorithm skips over them
+
+# Number of processes and resource types
+5 3
+
+# Total available instances of each resource type (A, B, C)
+10 5 7
+
+# Allocation Matrix (currently allocated resources)
+# Format: Process_ID A B C
+P0 0 1 0
+P1 2 0 0
+P2 3 0 2
+P3 2 1 1
+P4 0 0 2
+
+# Maximum Matrix (maximum resources each process may need)
+# Format: Process_ID A B C
+P0 7 5 3
+P1 3 2 2
+P2 9 0 2
+P3 2 2 2
+P4 4 3 3
