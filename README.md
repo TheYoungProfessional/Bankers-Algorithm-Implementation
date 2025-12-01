@@ -12,7 +12,7 @@ for installing and using this project.
 LICENSE: The GNU Public License, allows anyone who downloads this repo to modify and distribute the repo's
 contents as they please.
 
-Documentation.txt: Explains what the program does and what execution results to expect. Explains the project's
+doc.txt: Explains what the program does and what execution results to expect. Explains the project's
 usage of safety checking and resource allocation logic.
 
 INSTALLATION INSTRUCTIONS FOR LINUX/UNIX USERS
