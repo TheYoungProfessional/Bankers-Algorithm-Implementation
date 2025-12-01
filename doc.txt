@@ -1,0 +1,33 @@
+#doc.txt
+Banker's Algorithm Implementation: Documentation
+
+How It Works:
+
+This project implements the Banker's Algorithm for a hypothetical system where
+there are three resources that must be shared among five currently running
+processes. The Banker's Algorithm must take four data structures into account
+to complete this task: 1) total available resources, 2) maximum resource
+demand [per process], 3) current resource allocation [per process], and
+4) resource need [per process]. To calculate resource need for a process, the 
+current resource allocation must be subtracted from its maximum demand.
+
+The algorithm checks for safety by running a hypothetical scenario in which
+one of the currently active processes is allowed to request its maximum resources
+and complete. For a process to be eligible to do this, its maximum resource
+demands must be less than the sum of the currently available resources and
+the resources currently allocated to said process. The algorithm then supposes
+the process after completion, calculating the new available resources after
+the process has released all of its resources to the system. It then searches
+for a remaining process whose maximum demand is less than the available resources.
+
+Assuming the algorithm is always able to find and eligible process to continue
+building the safe sequence, it will continue this loop until there are no
+processes remaining. Otherwise, the algorithm must check for another eligible
+process and try again. If every process at a particular step of the sequence
+fails, the algorithm must take a step back and look for a different eligible
+process from there, and so on. If the system is in an unsafe state, the
+algorithm will build every safe sequence it can, and they will all be incomplete.
+
+Upon reading the provided system state in 'input.txt', the algorithm
+will determine that the system is in a SAFE state, and produce a corresponding
+safe sequence: P1, P3, P0, P2, P4.
